@@ -1,0 +1,46 @@
+.inner-container{
+    margin-bottom: 70px;
+    }
+    
+    .headertext{
+        font-size: 2.5rem;
+        font-weight: 400;
+        color: #a2a0a0;
+    }
+    
+    h3 {
+        width: 100%; 
+        text-align: left; 
+        border-bottom: 3px solid #d8d6d6; 
+        line-height: 0.1em;
+        margin: 10px 0 20px; 
+     } 
+     
+     h3{
+        span { 
+            background:#fff; 
+            padding:0 10px; 
+        }
+     }
+
+     .box-container {
+
+        border-radius: 10px;
+        // cursor: not-allowed;
+        display: block;
+        height: 250px;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+        padding: 50px 0px 0px 0px;
+        color: blue;
+     }
+
+     .btn{
+         float: right;
+         width: 90px;
+         border-radius: 10px;
+     }
+
+     .full-width {
+        width: 80%;
+      }
+    

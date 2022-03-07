@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+html, body { 
+    height: 100%;
+    overflow: auto;
+    background: #fff;
+}
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    min-height: 100%; 
+}
+
+  .error-snack {
+    background: #F44336;
+    color: #ffffff;
+    font-weight: 400;
+  }
+  
+  .success-snack {
+    background: rgb(45, 151, 31);
+    color: #ffffff;
+    font-weight: 400;
+  }
+  
+  .warning-snack {
+    background: rgb(202, 202, 68);
+    color: #000000;
+    font-weight: 400;
+  }
+
+  .main-content {
+    padding: 40px 10px 10px 10px;
+  }

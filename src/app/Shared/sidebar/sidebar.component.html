@@ -1,0 +1,31 @@
+<div class="d-flex flex-column sidebar flex-shrink-0 bg-primary" *ngIf="_authService.isLoggedIn()">
+    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        <li class="nav-item">
+            <a href="#" class="nav-link py-1" title="">
+            </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" 
+        [ngClass]="checkIfRouterActive('/dashboard') ? 'border-active' : 'border-inactive'">
+            <a href="" class="nav-link py-3 " title="" [routerLink]="['dashboard']"
+                (click)="getSelectedRoute('/dashboard')">
+                <span class="material-icons">dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item" 
+        [ngClass]="checkIfRouterActive('/countries') || checkIfRouterActive('/edit_country') ? 'border-active' : 'border-inactive'">
+            <a href="" class="nav-link py-3 " title="" [routerLink]="['countries']"
+                (click)="getSelectedRoute('/countries')">
+                <span class="material-icons">flag</span>
+            </a>
+        </li>
+    </ul>
+    <div class="logout-div">
+        <a href="" class="logout d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none"
+            (click)="userLogout()">
+            <span class="material-icons">power_settings_new</span>
+        </a>
+    </div>
+</div>
+<div class="content" [ngClass]="{'setfullwidth': !_authService.isLoggedIn()}">
+    <router-outlet></router-outlet>
+</div>

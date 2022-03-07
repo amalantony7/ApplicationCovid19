@@ -1,0 +1,68 @@
+<div class="main-content">
+    <div class="container">
+        <div class="container inner-container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12">
+                    <h3 class="headertext">
+                        <span>
+                            Total
+                        </span>
+                    </h3>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-3 col-sm-12 col-md-3 mb-2">
+                    <div class="box-container text-center">
+                        <p class="h-cls">Total Cases</p>
+                        <p class="p-cls pt-1">{{covidData?.cases | number}}</p>
+                    </div>
+                </div>
+                <div class="col-3 col-sm-12 col-md-3 mb-2">
+                    <div class="box-container text-center">
+                        <p class="h-cls">Total Deaths</p>
+                        <p class="p-cls pt-1">{{covidData?.deaths | number}}</p>
+                    </div>
+                </div>
+                <div class="col-3 col-sm-12 col-md-3 mb-2">
+                    <div class="box-container text-center">
+                        <p class="h-cls">Total Recovered</p>
+                        <p class="p-cls pt-1">{{covidData?.recovered | number}}</p>
+                    </div>
+                </div>
+                <div class="col-3 col-sm-12 col-md-3 mb-2"></div>
+            </div>
+        </div>
+        <div class="container inner-container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12">
+                    <h3 class="headertext">
+                        <span>
+                            Today
+                        </span>
+                    </h3>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-3 col-sm-12 col-md-3 mb-2">
+                    <div class="box-container text-center">
+                        <p class="h-cls">Cases</p>
+                        <p class="p-cls pt-1">{{covidData?.todayCases | number}}</p>
+                    </div>
+                </div>
+                <div class="col-3 col-sm-12 col-md-3 mb-2">
+                    <div class="box-container text-center">
+                        <p class="h-cls">Deaths</p>
+                        <p class="p-cls pt-1">{{covidData?.todayDeaths | number}}</p>
+                    </div>
+                </div>
+                <div class="col-3 col-sm-12 col-md-3 mb-2">
+                    <div class="box-container text-center">
+                        <p class="h-cls">Recovered</p>
+                        <p class="p-cls pt-1">{{covidData?.todayRecovered | number}}</p>
+                    </div>
+                </div>
+                <div class="col-3 col-sm-12 col-md-3 mb-2"></div>
+            </div>
+        </div>
+    </div>
+</div>

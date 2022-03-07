@@ -1,0 +1,19 @@
+.main-content{
+    height: 100% !important;
+    background: rgb(238,174,202);
+    background: linear-gradient(132deg, rgba(238,174,202,1) 0%, rgba(222,164,205,1) 13%, rgba(108,163,228,1) 94%);
+}
+
+h3{
+    text-align: center;
+    top: 45%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    left: 50%;
+    line-height: 50px;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: snow;
+}
+

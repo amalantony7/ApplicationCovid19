@@ -1,0 +1,76 @@
+<div class="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12">
+                <h3 class="headertext pt-1">
+                    <span>
+                        Edit {{editData?.countryName}}
+                    </span>
+                </h3>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-12 col-12 col-md-8">
+                <form id="editCountryForm" [formGroup]="editCountryForm">
+                    <div class="box-container text-center mt-3">
+                        <div class="row mt-2">
+                            <div class="col-6 col-sm-12 col-md-6">
+                                <mat-form-field class="full-width" appearance="legacy">
+                                    <mat-label>Cases</mat-label>
+                                    <input matInput type="text" placeholder="Cases" formControlName="cases"
+                                        [maxLength]="12">
+                                    <mat-error *ngIf="editCountryForm?.controls?.cases?.errors?.required">This field is
+                                        required</mat-error>
+                                    <mat-error *ngIf="editCountryForm?.controls?.cases?.errors?.pattern">Enter valid
+                                        number of cases</mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-6 col-sm-12 col-md-6">
+                                <mat-form-field class="full-width" appearance="legacy">
+                                    <mat-label>Deaths</mat-label>
+                                    <input matInput type="text" placeholder="Deaths" formControlName="deaths"
+                                        [maxLength]="12">
+                                    <mat-error *ngIf="editCountryForm?.controls?.deaths?.errors?.required">This field is
+                                        required</mat-error>
+                                    <mat-error *ngIf="editCountryForm?.controls?.deaths?.errors?.pattern">Enter valid
+                                        number of deaths</mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-6 col-sm-12 col-md-6">
+                                <mat-form-field class="full-width" appearance="legacy">
+                                    <mat-label>Recovered</mat-label>
+                                    <input matInput type="text" placeholder="Recovered" formControlName="recovered"
+                                        [maxLength]="12">
+                                    <mat-error *ngIf="editCountryForm?.controls?.recovered?.errors?.required">This field
+                                        is required</mat-error>
+                                    <mat-error *ngIf="editCountryForm?.controls?.recovered?.errors?.pattern">Enter valid
+                                        number of recovered</mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-6 col-sm-12 col-md-6">
+                                <mat-form-field class="full-width" appearance="legacy">
+                                    <mat-label>Tests</mat-label>
+                                    <input matInput type="text" placeholder="Tests" formControlName="tests"
+                                        [maxLength]="12">
+                                    <mat-error *ngIf="editCountryForm?.controls?.tests?.errors?.required">This field is
+                                        required</mat-error>
+                                    <mat-error *ngIf="editCountryForm?.controls?.tests?.errors?.pattern">Enter valid
+                                        number of tests</mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12 col-sm-12 col-md-12">
+                            <button class="btn btn-primary" [disabled]="!editCountryForm.valid" (click)="submitData()">Save</button>
+                            <button class="btn btn-secondary" style="margin-right: 5px;"
+                                (click)="redirectBack()">Canel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-12 col-12 col-md-4"></div>
+        </div>
+    </div>
